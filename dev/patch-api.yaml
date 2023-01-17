@@ -1,28 +1,25 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: aspnetcorewebapi6
+  name: dlh-api-test
   labels:
-    app: aspnetcorewebapi6
-    app.kubernetes.io/component: aspnetcorewebapi6
-    app.kubernetes.io/instance: aspnetcorewebapi6
-    app.kubernetes.io/name: aspnetcorewebapi6
-    app.kubernetes.io/part-of: aspnetcorewebapi6
+    app: dlh-api-test
+    app.kubernetes.io/component: dlh-api-test
+    app.kubernetes.io/instance: dlh-api-test
+    app.kubernetes.io/name: dlh-api-test
+    app.kubernetes.io/part-of: dlh-api-test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: aspnetcorewebapi6
+      app: dlh-api-test
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: aspnetcorewebapi6
-        deployment: aspnetcorewebapi6
+        app: dlh-api-test
+        deployment: dlh-api-test
     spec:
-      imagePullSecrets:
-      - name: acr-creds
       containers:
-        - name: aspnetcorewebapi6
-
-          image: goaaroregistry.azurecr.io/024087d6-4aa7-4a52-90ec-0db8ffe1249e/dlh-dev/aspnetcorewebapi6:86dde839a3babbb4d6871e340152f42750d0f3e8
+        - name: dlh-api-test
+          image: goaaroregistry.azurecr.io/024087d6-4aa7-4a52-90ec-0db8ffe1249e/dlh-dev/dlh-api-test:latest
