@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: aspnetcorewebapi6
+    app.kubernetes.io/component: aspnetcorewebapi6
+    app.kubernetes.io/instance: aspnetcorewebapi6
+    app.kubernetes.io/name: aspnetcorewebapi6
+    app.kubernetes.io/part-of: aspnetcorewebapi6
+  name: aspnetcorewebapi6
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aspnetcorewebapi6
+  template:
+    metadata:
+      labels:
+        app: aspnetcorewebapi6
+        deployment: aspnetcorewebapi6
+    spec:
+      containers:
+      - image: goaaroregistry.azurecr.io/024087d6-4aa7-4a52-90ec-0db8ffe1249e/dlh-dev/aspnetcorewebapi6:86dde839a3babbb4d6871e340152f42750d0f3e8
+        name: aspnetcorewebapi6
+      imagePullSecrets:
+      - name: acr-creds
