@@ -20,5 +20,5 @@ spec:
         deployment: dlh-api-test
     spec:
       containers:
-      - image: goaaroregistry.azurecr.io/024087d6-4aa7-4a52-90ec-0db8ffe1249e/dlh-dev/dlh-api-test:c11e21ab8a22488a001ab295fdfae693788f2b41
+      - image: goaaroregistry.azurecr.io/024087d6-4aa7-4a52-90ec-0db8ffe1249e/dlh-dev/dlh-api-test:4234e75f3626f77574edd965f83874f960863b30
         name: dlh-api-test
