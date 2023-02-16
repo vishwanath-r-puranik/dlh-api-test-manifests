@@ -22,4 +22,4 @@ spec:
     spec:
       containers:
         - name: dlh-api-test
-          image: goaaroregistry.azurecr.io/024087d6-4aa7-4a52-90ec-0db8ffe1249e/dlh-dev/dlh-api-test:a007b71313c05dc027e1b08326db27ea9519b28d
+          image: goaaroregistry.azurecr.io/024087d6-4aa7-4a52-90ec-0db8ffe1249e/dlh-dev/dlh-api-test:d45f3aa1a6e943589db65aaa3892a7b965c42d70
